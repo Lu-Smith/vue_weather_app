@@ -33,10 +33,23 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
-  margin: 60px;
+  margin: 20px;
+  background-color: rgb(176, 219, 236);
 }
 
 #app {
   background-image: url("./assets/cold-bg.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s all ease-in-out;
+  border-radius: 40px;
+}
+
+h1 {
+  padding-top: 40px;
+}
+
+main {
+  min-height: 100vh;
 }
 </style>
