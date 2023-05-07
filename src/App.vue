@@ -1,5 +1,12 @@
 <template>
-  <h1>Weather App</h1>
+  <div id="app">
+    <h1>Weather App</h1>
+    <main>
+      <div class="search-box">
+        <input type="text" class="search-bar" placeholder="Search..." />
+      </div>
+    </main>
+  </div>
 </template>
 
 <script>
@@ -16,6 +23,11 @@ export default {
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
