@@ -6,6 +6,12 @@
 export default {
   name: "App",
   components: {},
+  data() {
+    return;
+    {
+      api_key: "066ad54b2cd3c41c1bb7a8f3fc5f5ed0";
+    }
+  },
 };
 </script>
 
