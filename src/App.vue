@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <h1>Weather App</h1>
     <main>
+      <h1>Weather App</h1>
       <div class="search-box">
         <input type="text" class="search-bar" placeholder="Search..." />
       </div>
@@ -34,7 +34,7 @@ body {
   text-align: center;
   color: #2c3e50;
   margin: 20px;
-  background-color: rgb(176, 219, 236);
+  background-color: rgb(124, 172, 190);
 }
 
 #app {
@@ -45,11 +45,17 @@ body {
   border-radius: 40px;
 }
 
-h1 {
-  padding-top: 40px;
-}
-
 main {
   min-height: 100vh;
+  border-radius: 40px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.55)
+  );
+}
+
+h1 {
+  padding: 40px 0;
 }
 </style>
