@@ -13,6 +13,8 @@
       :class="
         typeof weather.main != 'undefined' && weather.main.temp > 16
           ? 'hot-bg'
+          : '' || (typeof weather.main != 'undefined' && weather.main.temp < 5)
+          ? 'cold-bg'
           : ''
       "
     />
@@ -45,6 +47,8 @@
       :class="
         typeof weather.main != 'undefined' && weather.main.temp > 16
           ? 'hot-bg'
+          : '' || (typeof weather.main != 'undefined' && weather.main.temp < 5)
+          ? 'cold-bg'
           : ''
       "
     />
@@ -141,17 +145,22 @@ body {
 }
 
 #app {
-  background-image: url("./assets/cold-bg.jpg");
+  background-image: url("./assets/warm-bg.jpg");
   background-size: cover;
   background-position: bottom;
   transition: 0.4s all ease-in-out;
   border-radius: 40px;
-  color: rgb(61, 43, 32);
+  color: rgb(52, 15, 58);
 }
 
 #app.hot {
   background-image: url("./assets/hot-bg.jpg");
   color: rgb(158, 9, 9);
+}
+
+#app.cold {
+  background-image: url("./assets/cold-bg.jpg");
+  color: rgb(61, 43, 32);
 }
 
 main {

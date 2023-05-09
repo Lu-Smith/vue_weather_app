@@ -19,11 +19,15 @@ p {
   padding: 20px 0;
   font-weight: 500;
   border-radius: 0 0 40px 40px;
-  background-color: rgb(61, 43, 32);
+  background-color: rgb(52, 15, 58);
+  color: #c8efde;
 }
 
 p.hot-bg {
   background-color: rgb(245, 108, 35);
+}
+p.cold-bg {
+  background-color: rgb(61, 43, 32);
 }
 .cool-link {
   position: relative;
