@@ -2,7 +2,11 @@
   <div
     id="app"
     :class="
-      typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'hot' : ''
+      typeof weather.main != 'undefined' && weather.main.temp > 16
+        ? 'hot'
+        : '' || (typeof weather.main != 'undefined' && weather.main.temp < 5)
+        ? 'cold'
+        : ''
     "
   >
     <headerApp
@@ -133,7 +137,6 @@ export default {
 body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
-  color: #2c3e50;
   margin: 20px;
 }
 
@@ -143,10 +146,12 @@ body {
   background-position: bottom;
   transition: 0.4s all ease-in-out;
   border-radius: 40px;
+  color: rgb(61, 43, 32);
 }
 
 #app.hot {
   background-image: url("./assets/hot-bg.jpg");
+  color: rgb(158, 9, 9);
 }
 
 main {
@@ -160,6 +165,7 @@ main {
 
 h1 {
   padding: 40px 0;
+  text-shadow: 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 .search-box {
@@ -174,12 +180,12 @@ h1 {
   text-align: center;
   margin: 0 auto;
   padding: 15px;
-  color: #313131;
+  color: rgb(61, 43, 32);
   font-size: 20px;
   appearance: none;
   border: none;
   background: none;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.45);
   border-radius: 0 16px 0 16px;
   transition: 0.4s ease-in-out;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);

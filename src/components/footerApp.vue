@@ -19,7 +19,7 @@ p {
   padding: 20px 0;
   font-weight: 500;
   border-radius: 0 0 40px 40px;
-  background-color: rgb(17, 16, 16);
+  background-color: rgb(61, 43, 32);
 }
 
 p.hot-bg {
