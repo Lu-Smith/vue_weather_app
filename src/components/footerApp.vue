@@ -19,6 +19,7 @@ p {
   padding: 20px 0;
   background-color: rgb(95, 213, 233);
   font-weight: 500;
+  border-radius: 0 0 40px 40px;
 }
 .cool-link {
   position: relative;

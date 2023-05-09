@@ -5,6 +5,7 @@
       typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'hot' : ''
     "
   >
+    <headerApp />
     <main>
       <h1>Weather App</h1>
       <div class="search-box">
@@ -36,11 +37,13 @@
 
 <script>
 import footerApp from "./components/footerApp.vue";
+import headerApp from "./components/headerApp.vue";
 
 export default {
   name: "App",
   components: {
     footerApp,
+    headerApp,
   },
   data() {
     return {
@@ -127,7 +130,7 @@ body {
   background-size: cover;
   background-position: bottom;
   transition: 0.4s all ease-in-out;
-  border-radius: 40px 40px 0 0;
+  border-radius: 40px;
 }
 
 #app.hot {
@@ -136,7 +139,6 @@ body {
 
 main {
   min-height: 100vh;
-  border-radius: 40px 40px 0 0;
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.15),
