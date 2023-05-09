@@ -39,7 +39,7 @@
         <div class="weather-box">
           <div class="temperature">{{ Math.round(weather.main.temp) }}℃</div>
           <div class="weather">{{ weather.weather[0].main }}</div>
-          <div class="wind">{{ weather.wind.speed }}</div>
+          <div class="wind">{{ weather.wind.speed }} m/s 💨</div>
         </div>
       </div>
     </main>
@@ -241,5 +241,13 @@ h1 {
   font-weight: 700;
   font-style: italic;
   text-shadow: 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.weather-box .wind {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  font-style: italic;
 }
 </style>
