@@ -58,4 +58,25 @@ main {
 h1 {
   padding: 40px 0;
 }
+
+.search-box {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.search-box .search-bar {
+  display: block;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px;
+  color: #313131;
+  font-size: 20px;
+  appearance: none;
+  border: none;
+  background: none;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 0 16px 0 16px;
+}
 </style>
