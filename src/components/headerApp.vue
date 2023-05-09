@@ -10,6 +10,6 @@ h2 {
 }
 
 h2.hot-bg {
-  background-color: red;
+  background-color: rgb(245, 108, 35);
 }
 </style>

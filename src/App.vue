@@ -37,7 +37,13 @@
         </div>
       </div>
     </main>
-    <footerApp />
+    <footerApp
+      :class="
+        typeof weather.main != 'undefined' && weather.main.temp > 16
+          ? 'hot-bg'
+          : ''
+      "
+    />
   </div>
 </template>
 
@@ -148,7 +154,7 @@ main {
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.15),
-    rgba(0, 0, 0, 0.55)
+    rgba(0, 0, 0, 0.75)
   );
 }
 
