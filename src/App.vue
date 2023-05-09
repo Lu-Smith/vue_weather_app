@@ -9,6 +9,8 @@
         <div class="location-box">
           <div class="location">Edinburgh, UK</div>
           <div class="date">Monday 20 January 2023</div>
+        </div>
+        <div class="weather-box">
           <div class="temperature">0℃</div>
           <div class="weather">Rain</div>
         </div>
@@ -94,5 +96,26 @@ h1 {
   background-color: rgba(255, 255, 255, 0.75);
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
   border-radius: 16px 0 16px 0;
+}
+
+.location-box .location {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.location-box .date {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.weather-box .temperature {
+  display: inline-block;
+  padding: 10px 25px;
+  color: #fff;
 }
 </style>
