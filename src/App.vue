@@ -5,7 +5,13 @@
       typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'hot' : ''
     "
   >
-    <headerApp />
+    <headerApp
+      :class="
+        typeof weather.main != 'undefined' && weather.main.temp > 16
+          ? 'hot-bg'
+          : ''
+      "
+    />
     <main>
       <h1>Weather App</h1>
       <div class="search-box">
