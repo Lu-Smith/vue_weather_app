@@ -30,13 +30,18 @@
         </div>
       </div>
     </main>
+    <footerApp />
   </div>
 </template>
 
 <script>
+import footerApp from "./components/footerApp.vue";
+
 export default {
   name: "App",
-  components: {},
+  components: {
+    footerApp,
+  },
   data() {
     return {
       api_key: "066ad54b2cd3c41c1bb7a8f3fc5f5ed0",
@@ -122,7 +127,7 @@ body {
   background-size: cover;
   background-position: bottom;
   transition: 0.4s all ease-in-out;
-  border-radius: 40px;
+  border-radius: 40px 40px 0 0;
 }
 
 #app.hot {
@@ -131,7 +136,7 @@ body {
 
 main {
   min-height: 100vh;
-  border-radius: 40px;
+  border-radius: 40px 40px 0 0;
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.15),
