@@ -5,6 +5,14 @@
       <div class="search-box">
         <input type="text" class="search-bar" placeholder="Search..." />
       </div>
+      <div class="weather-wrap">
+        <div class="location-box">
+          <div class="location">Edinburgh, UK</div>
+          <div class="date">Monday 20 January 2023</div>
+          <div class="temperature">0℃</div>
+          <div class="weather">Rain</div>
+        </div>
+      </div>
     </main>
   </div>
 </template>
