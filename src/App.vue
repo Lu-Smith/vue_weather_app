@@ -11,10 +11,12 @@
           @keypress="fetchWeather"
         />
       </div>
-      <div class="weather-wrap">
+      <div class="weather-wrap" v-if="typeof weather.main != 'undefined'">
         <p>{{ query }}</p>
         <div class="location-box">
-          <div class="location">Edinburgh, UK</div>
+          <div class="location">
+            {{ weather.name }}, {{ weather.sys.country }}
+          </div>
           <div class="date">Monday 20 January 2023</div>
         </div>
         <div class="weather-box">
