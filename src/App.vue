@@ -1,5 +1,10 @@
 <template>
-  <div id="app">
+  <div
+    id="app"
+    :class="
+      typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'hot' : ''
+    "
+  >
     <main>
       <h1>Weather App</h1>
       <div class="search-box">
@@ -110,7 +115,6 @@ body {
   text-align: center;
   color: #2c3e50;
   margin: 20px;
-  background-color: rgb(124, 172, 190);
 }
 
 #app {
@@ -119,6 +123,10 @@ body {
   background-position: bottom;
   transition: 0.4s all ease-in-out;
   border-radius: 40px;
+}
+
+#app.hot {
+  background-image: url("./assets/hot-bg.jpg");
 }
 
 main {
