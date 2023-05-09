@@ -3,15 +3,22 @@
     <main>
       <h1>Weather App</h1>
       <div class="search-box">
-        <input type="text" class="search-bar" placeholder="Search..." />
+        <input
+          type="text"
+          class="search-bar"
+          placeholder="Search..."
+          v-model="query"
+          @keypress="fetchWeather"
+        />
       </div>
       <div class="weather-wrap">
+        <p>{{ query }}</p>
         <div class="location-box">
           <div class="location">Edinburgh, UK</div>
           <div class="date">Monday 20 January 2023</div>
         </div>
         <div class="weather-box">
-          <div class="temperature">0℃</div>
+          <div class="temperature">10℃</div>
           <div class="weather">Rain</div>
         </div>
       </div>
@@ -23,12 +30,34 @@
 export default {
   name: "App",
   components: {},
-  // data() {
-  //   return;
-  //   {
-  //     api_key: "066ad54b2cd3c41c1bb7a8f3fc5f5ed0";
-  //   }
-  // },
+  data() {
+    return {
+      api_key: "066ad54b2cd3c41c1bb7a8f3fc5f5ed0",
+      url_base: "https://api.openweathermap.org/data/2.5/weather?",
+      query: "",
+      weather: {},
+    };
+  },
+  methods: {
+    fetchWeather(e) {
+      if (e.key == "Enter") {
+        fetch(
+          `${this.url_base}q=${this.query}&appid=${this.api_key}&units=metric`
+        )
+          .then((res) => {
+            return res.json();
+          })
+          .then(this.setResults)
+          .catch((error) => {
+            console.error(error);
+          });
+      }
+    },
+    setResults(results) {
+      this.weather = results;
+      console.log(results);
+    },
+  },
 };
 </script>
 
