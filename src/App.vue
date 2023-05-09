@@ -20,8 +20,9 @@
           <div class="date">Monday 20 January 2023</div>
         </div>
         <div class="weather-box">
-          <div class="temperature">10℃</div>
-          <div class="weather">Rain</div>
+          <div class="temperature">{{ weather.main.temp }}℃</div>
+          <div class="weather">{{ weather.weather[0].main }}</div>
+          <div class="wind">{{ weather.wind.speed }}</div>
         </div>
       </div>
     </main>
