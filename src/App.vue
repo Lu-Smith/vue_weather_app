@@ -78,5 +78,13 @@ h1 {
   background: none;
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 0 16px 0 16px;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
+
+.search-box .search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
+  border-radius: 16px 0 16px 0;
 }
 </style>
